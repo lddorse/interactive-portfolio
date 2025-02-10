@@ -1,12 +1,19 @@
+import { Parallax } from "react-scroll-parallax";
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import GridSections from "../components/GridSections";
+import Gallery from "../components/Gallery";
 
-const Home = () => {
+export default function Home() {
   return (
     <Layout>
-      <h1>Welcome to My Portfolio</h1>
+       <Hero />
+        <Hero />
+        <GridSections />
+        <Gallery />
+      
+   
     </Layout>
   );
-};
-
-export default Home;
+}
 
