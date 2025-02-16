@@ -1,48 +1,70 @@
 import { useState } from "react";
-import Link from "next/link"; // Import Next.js Link component
 import styles from "../styles/gridsections.module.css";
 
 export default function GridSections() {
-  const [hovered, setHovered] = useState(null);
-
-  const handleMouseEnter = (id) => setHovered(id);
-  const handleMouseLeave = () => setHovered(null);
+  const [expanded, setExpanded] = useState(null);
 
   const sections = [
-    { id: "projects", label: "Projects", link: "/projects" },
-    { id: "about", label: "About", link: "/about" },
-    { id: "featured", label: "Featured Work", link: "/featured" },
-    { id: "contact", label: "Contact", link: "/contact" },
+    {
+      id: "about",
+      label: "Elo Goodington",
+      content: (
+        <div>
+          <h2>About Me</h2>
+          <p>
+          One of the most influential philosophers in the history of Western philosophy. His contributions to metaphysics, epistemology, ethics, and aesthetics have had a profound impact on almost every philosophical movement that followed him.
+<br></br>
+“What can we know?” The answer, if it can be stated simply, is that our knowledge is constrained to mathematics and the science of the natural, empirical world.
+          </p>
+          <img src="/images/elo.png" alt="About Me" className={styles.sectionImage} />
+        </div>
+      ),
+    },
+    {
+      id: "contact",
+      label: "Contact",
+      content: (
+        <div>
+          <h2>Get in Touch</h2>
+          <p>Feel free to reach out for collaborations, inquiries, or just to say hello!</p>
+          <form className={styles.contactForm}>
+            <label>Name:</label>
+            <input type="text" placeholder="Your Name" />
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your Email" />
+
+            <label>Message:</label>
+            <textarea placeholder="Your Message"></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      ),
+    },
   ];
 
+  const handleClick = (id) => {
+    setExpanded(expanded === id ? null : id);
+  };
+
   return (
-    <div className={styles.gridContainer} id="gridContainer">
-      {sections.map(({ id, label, link }) => (
-        <Link key={id} href={link} passHref legacyBehavior>
-          <a
-            className={styles.section}
-            id={id}
-            style={{
-              backgroundColor: hovered === id ? getColor(id) : "black",
-              transition: "background-color 0.5s ease-in-out",
-            }}
-            onMouseEnter={() => handleMouseEnter(id)}
-            onMouseLeave={handleMouseLeave}
+    <div className={styles.gridContainer}>
+      {sections.map(({ id, label, content }) => (
+        <div key={id} className={styles.gridItem}>
+          <div
+            className={`${styles.section} ${expanded === id ? styles.active : ""}`}
+            onClick={() => handleClick(id)}
           >
             {label}
-          </a>
-        </Link>
+          </div>
+
+          {/* Expandable Content Below */}
+          <div className={`${styles.expandedContent} ${expanded === id ? styles.show : ""}`}>
+            {content}
+          </div>
+        </div>
       ))}
     </div>
   );
 }
-
-const getColor = (id) => {
-  const colors = {
-    projects: "#ff4757",
-    about: "#1e90ff",
-    featured: "#2ed573",
-    contact: "#ffa502",
-  };
-  return colors[id] || "black";
-};

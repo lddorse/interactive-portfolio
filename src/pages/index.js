@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <Layout>
        <Hero />
-        <Hero />
         <GridSections />
         <Gallery />
       
