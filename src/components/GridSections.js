@@ -16,7 +16,6 @@ export default function GridSections() {
 <br></br>
 “What can we know?” The answer, if it can be stated simply, is that our knowledge is constrained to mathematics and the science of the natural, empirical world.
           </p>
-          <img src="/images/elo.png" alt="About Me" className={styles.sectionImage} />
         </div>
       ),
     },

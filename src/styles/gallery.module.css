@@ -1,59 +1,41 @@
-.galleryContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
-    grid-auto-rows: 10px; /* Small row height for precise control */
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .imageWrapper {
-    position: relative;
-    display: block;
-    width: 100%;
-  }
-  
-  .galleryImage {
-    width: 100%;
-    display: block;
-    border-radius: 5px;
-    object-fit: cover; /* Ensures images fill their space properly */
-  }
-  
-  .imageWrapper {
-    grid-row-end: span var(--row-span); /* Dynamically span rows */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .galleryContainer {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .galleryContainer {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-  }
-  .masonryGrid {
-    display: flex;
-    margin-left: -10px; /* Fix for spacing */
-    width: auto;
-  }
-  
-  .masonryColumn {
-    padding-left: 10px; /* Fix for spacing */
-    background-clip: padding-box;
-  }
-  
-  .imageWrapper {
-    margin-bottom: 10px;
-    position: relative;
-  }
-  
-  .galleryImage {
-    width: 100%;
-    display: block;
-    border-radius: 5px;
-  }
-  
+.masonryGrid {
+  display: flex;
+  margin-left: -10px; /* Adjust spacing */
+  width: auto;
+}
+
+.masonryColumn {
+  padding-left: 10px; /* Space between columns */
+  background-clip: padding-box;
+}
+
+.imageWrapper {
+  position: relative;
+  margin-bottom: 15px; /* Adjust spacing */
+}
+
+.galleryImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.likeButton,
+.commentButton {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}

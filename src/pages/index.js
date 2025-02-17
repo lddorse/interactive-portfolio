@@ -1,4 +1,3 @@
-import { Parallax } from "react-scroll-parallax";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import GridSections from "../components/GridSections";
