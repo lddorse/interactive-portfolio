@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 
     let lastPath = sessionStorage.getItem("lastPath");
 
-    const handleRouteChangeStart = (url) => {
+    const handleRouteChangeStart = () => {
       sessionStorage.setItem("lastPath", window.location.pathname);
       sessionStorage.setItem("scrollPosition", document.documentElement.scrollTop);
     };
