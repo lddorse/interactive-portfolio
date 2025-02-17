@@ -14,6 +14,12 @@
   object-fit: cover; /* Ensures the image fully covers the screen */
   z-index: 1; /* Background layer */
 }
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  .heroImage {
+    content: url("/images/bwide.jpg"); /* Mobile version */
+  }
+}
 
 .parallaxLogo {
   position: absolute;
@@ -28,9 +34,23 @@
 }
 
 .fullscreenLogo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures logo fills the screen */
-  mix-blend-mode: multiply; /* Optional: Try different blending modes */
+  width: 100vw; /* Use viewport width to make it responsive */
+  height: auto;
+  object-fit: contain; /* Ensures the logo is fully visible */
+  mix-blend-mode: multiply; /* Optional effect */
   opacity: 1; /* Adjust opacity if needed */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .fullscreenLogo, .heroImage {
+    width: 100vw; /* Adjust for smaller screens */
+    max-width: 2000px; /* Ensure it doesn’t get too big */
+  }
+}
+/* Mobile Logo */
+@media screen and (max-width: 768px) {
+  .fullscreenLogo {
+    content: url("/images/elowh.png"); /* Swaps logo for mobile */
+  }
 }
