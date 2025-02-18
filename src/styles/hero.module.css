@@ -17,7 +17,7 @@
 /* Mobile version */
 @media screen and (max-width: 768px) {
   .heroImage {
-    content: url("/images/bwide.jpg"); /* Mobile version */
+    content: url("/images/bg2.jpg"); /* Mobile version */
   }
 }
 

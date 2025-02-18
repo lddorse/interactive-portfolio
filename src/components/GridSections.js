@@ -7,15 +7,18 @@ export default function GridSections() {
   const sections = [
     {
       id: "about",
-      label: "Elo Goodington",
+      label: "The Origin",
       content: (
         <div>
-          <h2>About Me</h2>
+          <h2></h2>
           <p>
-          One of the most influential philosophers in the history of Western philosophy. His contributions to metaphysics, epistemology, ethics, and aesthetics have had a profound impact on almost every philosophical movement that followed him.
-<br></br>
-“What can we know?” The answer, if it can be stated simply, is that our knowledge is constrained to mathematics and the science of the natural, empirical world.
-          </p>
+          Elo Goodington was born out of necessity—an identity forged in a crowded place where individuality had to be claimed. In that space, everyone had to carve out their own place, and Elo became mine.<br /><br />
+
+From the start, Elo was more than just a name—it was a creative force, a pursuit of artistry across mediums. While studying Art Technology, I explored the intersections of digital and physical art, mastering a range of disciplines: audio production, video editing, 2D and 3D design, digital illustration, printmaking, stained glass, and street art. Creativity was never confined to one form—it was an evolving process, constantly shifting between mediums, techniques, and technologies.<br /><br />
+
+Street art played a defining role in shaping Elo’s aesthetic. What started as an underground creative outlet became a visual language, a way to interact with space and culture. Over time, Elo Goodington’s work found its way from the streets to gallery walls, featured in three group art shows and three independent exhibitions.<br /><br />
+
+Today, Elo Goodington continues as an ever-expanding creative identity—one that blends art, technology, and immersive experiences. Whether through visual storytelling, interactive media, or multimedia installations, the goal remains the same: to create work that leaves an impact, that engages, and that resonates beyond the moment.</p>
         </div>
       ),
     },

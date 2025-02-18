@@ -7,7 +7,7 @@ export default function HeroSection() {
     <div className={styles.heroContainer}>
       {/* Background Image */}
       <Image
-        src="/images/e2.jpg"
+        src="/images/bg2.jpg"
         alt="Hero Background"
         layout="fill"
         objectFit="cover"
