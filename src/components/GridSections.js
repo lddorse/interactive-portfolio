@@ -2,12 +2,12 @@ import { useState } from "react";
 import styles from "../styles/gridsections.module.css";
 
 export default function GridSections() {
-  const [expanded, setExpanded] = useState(null);
+  const [expandedSection, setExpandedSection] = useState(null);
 
   const sections = [
     {
-      id: "about",
-      label: "The Origin",
+      id: "origin",
+      label: "Origin",
       content: (
         <div>
           <h2></h2>
@@ -23,8 +23,44 @@ Today, Elo Goodington continues as an ever-expanding creative identity—one tha
       ),
     },
     {
-      id: "contact",
-      label: "Contact",
+      id: "evolution",
+      label: "Evolution",
+      content: (
+        <div>
+          <h2></h2>
+          <p>
+          Elo Goodington was born out of necessity—an identity forged in a crowded place where individuality had to be claimed. In that space, everyone had to carve out their own place, and Elo became mine.<br /><br />
+</p>
+        </div>
+      ),
+    },
+    {
+      id: "method",
+      label: "Method",
+      content: (
+        <div>
+          <h2></h2>
+          <p>
+          Elo Goodington was born out of necessity—an identity forged in a crowded place where individuality had to be claimed. In that space, everyone had to carve out their own place, and Elo became mine.<br /><br />
+</p>
+        </div>
+      ),
+    },
+    {
+      id: "impact",
+      label: "Impact",
+      content: (
+        <div>
+          <h2></h2>
+          <p>
+          Elo Goodington was born out of necessity—an identity forged in a crowded place where individuality had to be claimed. In that space, everyone had to carve out their own place, and Elo became mine.<br /><br />
+</p>
+        </div>
+      ),
+    },
+    {
+      id: "shop",
+      label: "Shop",
       content: (
         <div>
           <h2>Get in Touch</h2>
@@ -46,23 +82,23 @@ Today, Elo Goodington continues as an ever-expanding creative identity—one tha
     },
   ];
 
-  const handleClick = (id) => {
-    setExpanded(expanded === id ? null : id);
+  const handleSectionClick = (id) => {
+    setExpandedSection(expandedSection === id ? null : id);
   };
 
   return (
     <div className={styles.gridContainer}>
       {sections.map(({ id, label, content }) => (
-        <div key={id} className={styles.gridItem}>
+        <div key={id} className={styles.gridItem} id={id}>
           <div
-            className={`${styles.section} ${expanded === id ? styles.active : ""}`}
-            onClick={() => handleClick(id)}
+            className={`${styles.section} ${expandedSection === id ? styles.active : ""}`}
+            onClick={() => handleSectionClick(id)}
           >
             {label}
           </div>
 
           {/* Expandable Content Below */}
-          <div className={`${styles.expandedContent} ${expanded === id ? styles.show : ""}`}>
+          <div className={`${styles.expandedContent} ${expandedSection === id ? styles.show : ""}`}>
             {content}
           </div>
         </div>

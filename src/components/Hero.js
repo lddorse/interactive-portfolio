@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Parallax Logo filling the screen */}
       <Parallax speed={-20} className={styles.parallaxLogo}>
         <Image
-          src="/images/elowide.png"
+          src="/images/elowide1.png"
           alt="Elo Goodington Logo"
           layout="intrinsic"
           width={800} // Adjust for best fit

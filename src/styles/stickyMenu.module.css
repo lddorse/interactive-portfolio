@@ -1,0 +1,35 @@
+.stickyMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(-100%); /* Initially hidden */
+    z-index: 1000;
+  }
+  
+  .stickyMenu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .stickyMenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .stickyMenu.show {
+    transform: translateY(-100%); /* Show when scrolling down */
+  }
+  
+  .stickyMenu.hide {
+    transform: translateY(0); /* Hide when scrolling up */
+  }
+  
